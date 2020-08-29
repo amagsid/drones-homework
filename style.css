@@ -1,0 +1,205 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    padding: 5px 20px 5px 20px;
+  
+}
+
+section {
+    width: 90%;
+    margin:auto;
+}
+
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header {
+    display: flex;
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #621940;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+ul {
+    list-style: none;
+    width: inherit;
+    margin: auto;
+}
+
+li {
+    margin: 5px 5px 5px 5px;
+    min-height: 400px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px grey;
+}
+
+li:hover {
+    background-color: #621940;
+    transform: scale(1.1);
+    transition: all .3s ease-in-out; 
+    color: white;
+
+}
+
+/* That didn't work but my idea was to apply a hover effect on the h3 when I hover over their parent (li), not the h3.
+I wonder if there's a way to do that. Will research it more. */
+
+/* UPDATE: it eventually worked but it affected the P in the first li of each setion, not sure why. I'll comment it out for now */ 
+/* li:first-child:hover {
+    font-weight: 700;
+    font-size: 1.2em; 
+} */
+
+/* I clipped all the drone images and seperated them from their background so it gives a better look
+when applying the animation and the background hover effect. I also put a subtle shadow to the drones*/
+img {
+    max-width: 60%;
+    height:auto;
+    margin: auto;
+    filter: drop-shadow(0px 5px 3px black);
+    animation: img-animation 3s ease;
+}
+
+#grid-floats .grid-item {
+    max-width:300px;
+    float: left;
+  
+
+}
+
+
+#grid-floats p {
+
+    max-height:200px;
+}
+
+h1 {
+font-size: 5rem;
+color: whitesmoke;
+}
+
+
+h2 {
+    text-align: center;
+    margin: 50px 20px 20px 20px;
+    font-size: 2.5rem;
+    font-weight: 700;
+   color:  #621940;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1em;
+    padding-top: 20px;
+}
+
+#grid-flex .grid-item {
+    max-width: 22%;
+}
+
+#grid-flex {
+    display:flex;
+    flex-wrap: wrap;   
+}
+
+ /*  I tried to expirement with the sizing and proportions here since I couldn't override the width of the first items
+ by using media quesries for responsiveness. My media querries affected everything except the first items */
+/*  The width here (44.5%) is just the width I found the first item to spsn 2 columns at as requested in the assignments */
+#grid-flex .grid-item:first-child {
+   /* max-width: 610px; */
+    max-width: 44.6%;
+}
+
+#grid-floats .grid-item:first-child {
+
+    max-width: 44.6%;
+    /*  max-width: 610px; */
+}
+
+   
+@media (max-width: 600px) {
+    li {
+ min-width: 500px;
+}
+ }
+
+ /*  The width here (44.5%) is just the width I found the first item to spsn 2 columns at as requested in the assignments */
+ @media (min-width: 600px) and (max-width: 1024px) {
+#grid-floats .grid-item  { min-width: 30%;
+height: 500px;
+ }
+}
+
+ @media (min-width: 600px) and (max-width: 1024px) {
+ #grid-floats .grid-item:nth-child(-n + 2) {
+  min-width: 40%;
+ }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    #grid-flex .grid-item  { min-width: 30%;
+    height: 500px;
+     }
+    }
+
+    @keyframes img-animation {
+        0%{
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+
+        100%{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

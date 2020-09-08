@@ -88,8 +88,8 @@ img {
 }
 
 h1 {
-font-size: 5rem;
-color: whitesmoke;
+    font-size: 5rem;
+    color: whitesmoke;
 }
 
 
@@ -98,7 +98,7 @@ h2 {
     margin: 50px 20px 20px 20px;
     font-size: 2.5rem;
     font-weight: 700;
-   color:  #621940;
+    color:  #621940;
 }
 
 h3 {
@@ -119,54 +119,57 @@ h3 {
  /*  I tried to expirement with the sizing and proportions here since I couldn't override the width of the first items
  by using media quesries for responsiveness. My media querries affected everything except the first items */
 /*  The width here (44.5%) is just the width I found the first item to spsn 2 columns at as requested in the assignments */
+
+/*  Updated ther magic number intoa calc function */
 #grid-flex .grid-item:first-child {
-   /* max-width: 610px; */
-    max-width: 44.6%;
+   max-width: calc(100% - 750px);
 }
 
-#grid-floats .grid-item:first-child {
 
-    max-width: 44.6%;
-    /*  max-width: 610px; */
+/*  Updated ther magic number intoa calc function */
+#grid-floats .grid-item:first-child {
+    max-width: calc(100% - 750px);
 }
 
    
 @media (max-width: 600px) {
     li {
- min-width: 500px;
+        min-width: 500px;
 }
  }
 
- /*  The width here (44.5%) is just the width I found the first item to spsn 2 columns at as requested in the assignments */
+
  @media (min-width: 600px) and (max-width: 1024px) {
-#grid-floats .grid-item  { min-width: 30%;
-height: 500px;
- }
+#grid-floats .grid-item  { 
+    min-width: 30%;
+    height: 500px;
+}
 }
 
  @media (min-width: 600px) and (max-width: 1024px) {
  #grid-floats .grid-item:nth-child(-n + 2) {
-  min-width: 40%;
- }
+     min-width: 40%;
+    }
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
-    #grid-flex .grid-item  { min-width: 30%;
-    height: 500px;
-     }
+    #grid-flex .grid-item  {
+        min-width: 30%;
+        height: 500px;
     }
+}
 
-    @keyframes img-animation {
-        0%{
-            opacity: 0;
-            transform: translateY(-30px);
-        }
-
-        100%{
-            opacity: 1;
-            transform: translateY(0px);
-        }
+@keyframes img-animation {
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
     }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 
 
 
